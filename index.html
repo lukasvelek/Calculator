@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <meta charset="utf-8">
+
+        <title>Calculator</title>
+    </head>
+    <body onload="setPreset('blue')">
+        <script type="text/javascript" src="calculator.js"></script>
+
+        <div id="wrapper">
+            <script type="text/javascript">
+                /*
+
+                Calculator keyboard layout
+
+                123+
+                456-
+                789x
+                c0=/
+
+                */
+            </script>
+
+            <!-- SECRET DATA HOLDERS -->
+            <input type="text" id="bank1" hidden>
+            <input type="text" id="operation" hidden>
+            <input type="text" id="bank2" hidden>
+            <input type="text" id="done" hidden>
+            <!-- END OF SECRET DATA HOLDERS -->
+
+            <!-- DISPLAY DEFINITION -->
+            <input type="text" id="display" disabled>
+            
+            <br>
+            <br>
+
+            <!-- BUTTON LAYOUT -->
+            <button onclick="buttonClick('1')">1</button>
+            <button onclick="buttonClick('2')">2</button>
+            <button onclick="buttonClick('3')">3</button>
+            <button onclick="buttonClick('+')">+</button>
+            
+            <br>
+
+            <button onclick="buttonClick('4')">4</button>
+            <button onclick="buttonClick('5')">5</button>
+            <button onclick="buttonClick('6')">6</button>
+            <button onclick="buttonClick('-')">-</button>
+            
+            <br>
+
+            <button onclick="buttonClick('7')">7</button>
+            <button onclick="buttonClick('8')">8</button>
+            <button onclick="buttonClick('9')">9</button>
+            <button onclick="buttonClick('x')">x</button>
+
+            <br>
+            
+            <button onclick="clearClick()">C</button>
+            <button onclick="buttonClick('0')">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="buttonClick('/')">/</button>
+            
+            <br>
+            <br>
+            
+            <button id="blue-preset" onclick="setPreset('blue')">Blue preset</button>
+            <button id="green-preset" onclick="setPreset('green')">Green preset</button>
+            <button id="red-preset" onclick="setPreset('red')">Red preset</button>
+            <button id="purple-preset" onclick="setPreset('purple')">Purple preset</button>
+            
+            <br>
+            
+            <button id="black-preset" onclick="setPreset('black')">Black preset</button>
+            <button id="white-preset" onclick="setPreset('white')">White preset</button>
+        </div>
+    </body>
+</html>
